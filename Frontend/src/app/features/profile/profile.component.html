@@ -1,0 +1,57 @@
+<!-- 
+<div class="container">
+    <h2>Profile</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div *ngFor="let key of keys" class="input-group">
+        <label>{{ key }}:</label>
+        <div class="control">
+          <button type="button" (click)="decrement(key)">-</button>
+          <input type="number" [(ngModel)]="formData[key]" name="{{ key }}" />
+          <button type="button" (click)="increment(key)">+</button>
+        </div>
+      </div>
+      <button type="submit">Submit to Backend</button>
+    </form>
+
+    <div *ngIf="message" class="message">{{ message }}</div>
+  </div> -->
+
+
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Profile</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+        <button type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+
+      </div>
+    </nav>
+
+  </div>
+  <div class="container">
+    
+    
+  
+    <form (ngSubmit)="onSubmit()">
+      <div *ngFor="let key of keys" class="input-group">
+        <label>{{ key }}:</label>
+        <div class="control">
+          <button type="button" (click)="decrement(key)">-</button>
+          <input type="number" [(ngModel)]="formData[key]" name="{{ key }}" />
+          <button type="button" (click)="increment(key)">+</button>
+        </div>
+      </div>
+      <button type="submit">Submit to Backend</button>
+    </form>
+  
+    <!-- Response Box -->
+    <div *ngIf="response" class="response-box">
+      <h3>Prediction Result:</h3>
+      <p>{{ response.type }}</p>
+    </div>
+  </div>
+  
